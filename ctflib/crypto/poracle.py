@@ -17,6 +17,8 @@ class block_decryptor(object):
             if self.oracle(block + self.data) and self._verify_block(block, pos):
                 return xor(bytes(pivot) + bytes([pos] * pos), block)
 
+        raise RuntimeError('Failed to decrypt byte {}'.format(pos))
+
     def _verify_block(self, block, pos):
         if pos == self.blocksize:
             return True

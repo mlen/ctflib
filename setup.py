@@ -6,7 +6,7 @@ setup(name='ctflib',
       author='mlen',
       author_email='mlen@mlen.pl',
       url='https://github.com/mlen/ctflib',
-      packages=['ctflib'],
+      packages=['ctflib', 'ctflib.crypto'],
 
       classifiers=(
           'Programming Language :: Python :: 3',
